@@ -103,9 +103,9 @@ fastify.get('/', async (request, reply) => {
 fastify.all('/incoming-call', async (request, reply) => {
     const twimlResponse = `<?xml version="1.0" encoding="UTF-8"?>
                           <Response>
-                              <Say>Please wait while we connect your call to the A. I. voice assistant, powered by Twilio and the Open-A.I. Realtime API</Say>
-                              <Pause length="1"/>
-                              <Say>O.K. you can start talking!</Say>
+                              <Say>Hello! This call is from Compassion Breeze hospital in regards to John Smith's upcoming procedure. If you are John Smith, please press 1 to confirm your identity.</Say>
+                              <Pause length="2"/>
+                              <Say>Connecting you to your scheduling assistant now.</Say>
                               <Connect>
                                   <Stream url="wss://${request.headers.host}/media-stream" />
                               </Connect>
